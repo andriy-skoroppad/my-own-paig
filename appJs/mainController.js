@@ -11,11 +11,14 @@
     function mainController($scope, $location) {
         $scope.myName = 'Скоропад Андрій';
         $scope.hello = 'Data wos sendet';
-        $scope.$watch('hello', function(){
-            console.log('mainController', $scope.hello);
-        })
+        //$scope.$watch('hello', function(){
+        //    console.log('mainController', $scope.hello);
+        //})
 
+        $scope.changesHello = function(){
 
+            $scope.hello = 'Скоропад Андрій';
+        }
     };
 
 

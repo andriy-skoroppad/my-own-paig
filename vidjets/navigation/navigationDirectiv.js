@@ -13,9 +13,9 @@
             replace: false,
             templateUrl: 'vidjets/navigation/navigation.html',
             link : function($scope, element, attrs, parentController){
-                console.log('navigation Directive', $scope);
                 $scope.changesHello = function(){
-                    $scope.hello = '1233422';
+                    console.log(event.target.innerHTML);
+                    $scope.hello = event.target.innerHTML;
                 }
             }
         }
