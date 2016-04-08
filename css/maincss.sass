@@ -1,9 +1,109 @@
+//mixin
+@mixin keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @-ms-keyframes #{$animation-name}
+    @content
+
+  @-o-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+@mixin animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+@mixin gradient45degr($color1, $start, $color2, $midle, $color3, $end)
+  background: -moz-linear-gradient(-45deg, $color1 $start, $color2 $midle, $color3 $end)
+  background: -webkit-gradient(left top, right bottom, color-stop($start, $color1), color-stop($midle, $color2), color-stop($end, $color3))
+  background: -webkit-linear-gradient(-45deg, $color1 $start, $color2 $midle, $color3 $end)
+  background: -o-linear-gradient(-45deg, $color1 $start, $color2 $midle, $color3 $end)
+  background: -ms-linear-gradient(-45deg, $color1 $start, $color2 $midle, $color3 $end)
+  background: linear-gradient(135deg, $color1 $start, $color2 $midle, $color3 $end)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#d2f7f5', GradientType=1 )
+  background-repeat: no-repeat
+
+@mixin backgroundPosition($arg1, $arg2)
+  background-position: $arg1 $arg2
+
+@mixin transition($transition...)
+  -moz-transition:    $transition
+  -o-transition:      $transition
+  -webkit-transition: $transition
+  transition:         $transition
+
+@mixin transition-property($property...)
+  -moz-transition-property:    $property
+  -o-transition-property:      $property
+  -webkit-transition-property: $property
+  transition-property:         $property
+
 body
-  background-color: aqua
-  color: red
   padding: 0
   margin: 0
-  
-
-
-
+  //@include gradient45degr(rgba(250,250,250,1), 0%, rgba(250,250,250,1), 0%, #d2f7f5, 100%)
+  //@include animation('lite 1s cubic-bezier(1, 1.01, .01, .03) infinite')
+  background-size: 400% 400%
+  *
+    background: none
+@include keyframes(lite)
+  0%
+    @include backgroundPosition(0%, 50%)
+  50%
+    @include backgroundPosition(100%, 50%)
+  100%
+    @include backgroundPosition(0%, 50%)
+.sidebar
+  width: 150px
+  height: 100%
+  display: inline-block
+  vertical-align: top
+  img
+    width: 100%
+.content
+  width: 1200px
+  margin: auto
+section
+  display: inline-block
+  vertical-align: top
+  width: 1040px
+  h1
+    display: block
+    width: 100%
+    border-bottom: 2px solid #d2f7f5
+    text-align: center
+    font-size: 28px
+    line-height: 32px
+  .contentApp
+    button
+      display: block
+      height: 60px
+      width: 90%
+      text-align: center
+      font-size: 28px
+      border: none
+      border-radius: 5px
+      margin: 5px auto 0
+      cursor: pointer
+      @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
+      background-size: 200% 200%
+      @include backgroundPosition(100%, 50%)
+      @include transition( background-position .8s)
+      &:hover
+        @include backgroundPosition(0%, 0%)
