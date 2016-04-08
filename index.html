@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html data-ng-app="myApp">
 <head lang="uk">
     <meta charset="UTF-8">
     <title>Скоропад Андрій</title>
@@ -11,18 +11,21 @@
     <script type="text/javascript" src="angular/angular.min.js"></script>
     <script type="text/javascript" src="angular/angular-ui-router.js"></script>
     <script type="text/javascript" src="appJs/app.js"></script>
+    <script type="text/javascript" src="appJs/mainController.js"></script>
+
+    <script type="text/javascript" src="vidjets/navigation/navigationModule.js"></script>
+    <script type="text/javascript" src="vidjets/navigation/navigationDirectiv.js"></script>
     
 </head>
-<body>
+<body data-ng-controller="mainController">
     <div class="content">
         <div class="sidebar">
-            <img src="img/myPhoto.jpg" alt="my Photo">
+            <!--<img src="img/myPhoto.jpg" alt="my Photo">-->
         </div>
         <section>
-            <h1>Скоропад Андрій</h1>
+            <h1>{{myName}}</h1>
             <div class="contentApp">
-                <button>Про мене</button>
-                <button>Мої роботи</button>
+                <navigation data-hello='hello'></navigation>
             </div>
         </section>
     </div>
