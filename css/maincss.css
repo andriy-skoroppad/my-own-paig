@@ -83,11 +83,12 @@ section {
     background-repeat: no-repeat;
     background-size: 200% 200%;
     background-position: 100% 50%;
-    -moz-transition: background-position 0.8s;
-    -o-transition: background-position 0.8s;
-    -webkit-transition: background-position 0.8s;
-    transition: background-position 0.8s; }
+    -moz-transition: background-position 0.8s, box-shadow 0.8s;
+    -o-transition: background-position 0.8s, box-shadow 0.8s;
+    -webkit-transition: background-position 0.8s, box-shadow 0.8s;
+    transition: background-position 0.8s, box-shadow 0.8s; }
     section .contentApp button:hover {
-      background-position: 0% 0%; }
+      background-position: 0% 0%;
+      box-shadow: 0 6px 9px -1px rgba(134, 201, 225, 0.3); }
 
 /*# sourceMappingURL=maincss.css.map */
