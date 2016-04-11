@@ -19,15 +19,24 @@
     <script type="text/javascript" src="vidjets/news/newsModule.js"></script>
     <script type="text/javascript" src="vidjets/news/newsDirectiv.js"></script>
 
+    <script type="text/javascript" src="vidjets/mywork/myworkModule.js"></script>
+    <script type="text/javascript" src="vidjets/mywork/myworkDirectiv.js"></script>
+
+    <script type="text/javascript" src="vidjets/aboutmy/aboutmyModule.js"></script>
+    <script type="text/javascript" src="vidjets/aboutmy/aboutmyDirectiv.js"></script>
+
 </head>
 <body data-ng-controller="mainController">
     <div class="content">
         <section>
             <ng-switch on="paige">
-                <h1 ng-switch-when="main" data-ng-click="changesHello()">{{myName}}</h1>
+                <h1 class="back" data-ng-click="changesHello()">{{myName}}</h1>
+
                 <div class="contentApp">
                     <navigation data-hello='hello' ng-switch-when="main"></navigation>
                     <news ng-switch-when="main"></news>
+                    <mywork></mywork>
+                    <aboutmy></aboutmy>
                 </div>
             </ng-switch>
 

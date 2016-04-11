@@ -62,18 +62,31 @@
 body
   padding: 0
   margin: 0
-  //@include gradient45degr(rgba(250,250,250,1), 0%, rgba(250,250,250,1), 0%, #d2f7f5, 100%)
+  margin-bottom: 30px
+  //@include gradient45degr(rgb(192, 189, 188), 0%, rgb(255, 253, 241), 0%, rgb(157, 157, 141), 100%)
   //@include animation('lite 1s cubic-bezier(1, 1.01, .01, .03) infinite')
-  background-size: 400% 400%
-  *
-    background: none
+
+
 @include keyframes(lite)
   0%
-    @include backgroundPosition(0%, 50%)
+    left: -5px
+    content: '<'
   50%
-    @include backgroundPosition(100%, 50%)
+    left: -20px
+    content: '<<'
   100%
-    @include backgroundPosition(0%, 50%)
+    left: -30px
+    content: '<<<'
+@include keyframes(gotu)
+  0%
+    left: -5px
+    content: '<'
+  50%
+    left: -20px
+    content: '<<'
+  100%
+    left: -30px
+    content: '<<<'
 .sidebar
   width: 150px
   height: 100%
@@ -96,6 +109,23 @@ section
     text-align: center
     font-size: 28px
     line-height: 32px
+    position: relative
+    cursor: pointer
+    &.back:before
+      content: '<'
+      display: inline-block
+      position: relative
+      height: 30px
+      width: 30px
+      font-size: 30px
+      top: 2px
+      left: -5px
+
+  .back:hover
+    &:before
+      @include animation('gotu .8s linear 1')
+      left: -30px
+      content: '<<<'
   .contentApp
     button
       display: block
@@ -108,10 +138,11 @@ section
       margin: 5px auto 0
       cursor: pointer
       outline: none
+      color: #6A8A8E
       @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
       background-size: 200% 200%
       @include backgroundPosition(100%, 50%)
-      @include transition( background-position .8s, box-shadow .8s)
+      @include transition( background-position .4s, box-shadow .4s)
       &:hover
         @include backgroundPosition(0%, 0%)
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
@@ -120,10 +151,11 @@ navigation
   height: auto
   display: inline-block
   vertical-align: top
+
 news
   width: 200px
   height: auto
-  border-left: 2px solid black
+  //border-left: 2px solid black
   display: inline-block
   vertical-align: top
   h2
@@ -157,7 +189,7 @@ news
       @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
       background-size: 200% 200%
       @include backgroundPosition(100%, 50%)
-      @include transition( background-position .8s, box-shadow .8s)
+      @include transition( background-position .4s, box-shadow .4s)
       &:hover
         @include backgroundPosition(0%, 0%)
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
@@ -167,12 +199,74 @@ news
       text-align: center
       top: 11px
       right: -17px
-      background: #590328
+      background: #ffee00
       height: 14px
       width: 70px
       font-size: 12px
       line-height: 12px
-      color: #E9FBFA
+      color: #000
       @include rotate(-45deg)
+mywork
+  width: 100%
+  .type
+    margin-top: 20px
+    color: #6A8A8E
+    border-bottom: 1px solid #d2f7f5
+    text-align: left
+    font-size: 24px
+    line-height: 28px
+    position: relative
+    cursor: pointer
+  .element
+    position: relative
+    display: inline-block
+    vertical-align: top
+    height: 180px
+    width: 180px
+    background-color: #6A8A8E
+    margin-right: 10px
+    margin-top: 10px
+    text-decoration: none
+    color: #6A8A8E
+    cursor: pointer
+    overflow: hidden
+    @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
+    background-size: 200% 200%
+    @include backgroundPosition(100%, 50%)
+    @include transition( background-position .4s, box-shadow .4s)
+    &:hover
+      @include backgroundPosition(0%, 0%)
+      box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
+    &:before
+      content: ''
+      position: relative
+      display: inline-block
+      height: 100%
+      vertical-align: middle
+      width: 0
+    .nameOf
+      display: inline-block
+      position: relative
+      vertical-align: middle
+      padding: 0
+      margin: 0
+      width: 96%
+      word-break: break-all
+      text-align: center
+    &.new:after
+      content: 'new'
+      position: absolute
+      text-align: center
+      bottom: 11px
+      right: -17px
+      background: #ffee00
+      height: 16px
+      width: 70px
+      font-size: 14px
+      line-height: 14px
+      color: #000
+      @include rotate(-45deg)
+
+
 
 

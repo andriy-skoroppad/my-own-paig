@@ -1,45 +1,108 @@
 body {
   padding: 0;
   margin: 0;
-  background-size: 400% 400%; }
-  body * {
-    background: none; }
+  margin-bottom: 30px; }
 
 @-webkit-keyframes lite {
   0% {
-    background-position: 0% 50%; }
+    left: -5px;
+    content: "<"; }
   50% {
-    background-position: 100% 50%; }
+    left: -20px;
+    content: "<<"; }
   100% {
-    background-position: 0% 50%; } }
+    left: -30px;
+    content: "<<<"; } }
 @-moz-keyframes lite {
   0% {
-    background-position: 0% 50%; }
+    left: -5px;
+    content: "<"; }
   50% {
-    background-position: 100% 50%; }
+    left: -20px;
+    content: "<<"; }
   100% {
-    background-position: 0% 50%; } }
+    left: -30px;
+    content: "<<<"; } }
 @-ms-keyframes lite {
   0% {
-    background-position: 0% 50%; }
+    left: -5px;
+    content: "<"; }
   50% {
-    background-position: 100% 50%; }
+    left: -20px;
+    content: "<<"; }
   100% {
-    background-position: 0% 50%; } }
+    left: -30px;
+    content: "<<<"; } }
 @-o-keyframes lite {
   0% {
-    background-position: 0% 50%; }
+    left: -5px;
+    content: "<"; }
   50% {
-    background-position: 100% 50%; }
+    left: -20px;
+    content: "<<"; }
   100% {
-    background-position: 0% 50%; } }
+    left: -30px;
+    content: "<<<"; } }
 @keyframes lite {
   0% {
-    background-position: 0% 50%; }
+    left: -5px;
+    content: "<"; }
   50% {
-    background-position: 100% 50%; }
+    left: -20px;
+    content: "<<"; }
   100% {
-    background-position: 0% 50%; } }
+    left: -30px;
+    content: "<<<"; } }
+@-webkit-keyframes gotu {
+  0% {
+    left: -5px;
+    content: "<"; }
+  50% {
+    left: -20px;
+    content: "<<"; }
+  100% {
+    left: -30px;
+    content: "<<<"; } }
+@-moz-keyframes gotu {
+  0% {
+    left: -5px;
+    content: "<"; }
+  50% {
+    left: -20px;
+    content: "<<"; }
+  100% {
+    left: -30px;
+    content: "<<<"; } }
+@-ms-keyframes gotu {
+  0% {
+    left: -5px;
+    content: "<"; }
+  50% {
+    left: -20px;
+    content: "<<"; }
+  100% {
+    left: -30px;
+    content: "<<<"; } }
+@-o-keyframes gotu {
+  0% {
+    left: -5px;
+    content: "<"; }
+  50% {
+    left: -20px;
+    content: "<<"; }
+  100% {
+    left: -30px;
+    content: "<<<"; } }
+@keyframes gotu {
+  0% {
+    left: -5px;
+    content: "<"; }
+  50% {
+    left: -20px;
+    content: "<<"; }
+  100% {
+    left: -30px;
+    content: "<<<"; } }
 .sidebar {
   width: 150px;
   height: 100%;
@@ -63,7 +126,26 @@ section {
     border-bottom: 2px solid #d2f7f5;
     text-align: center;
     font-size: 28px;
-    line-height: 32px; }
+    line-height: 32px;
+    position: relative;
+    cursor: pointer; }
+    section h1.back:before {
+      content: "<";
+      display: inline-block;
+      position: relative;
+      height: 30px;
+      width: 30px;
+      font-size: 30px;
+      top: 2px;
+      left: -5px; }
+  section .back:hover:before {
+    -webkit-animation: gotu .8s linear 1;
+    -moz-animation: gotu .8s linear 1;
+    -ms-animation: gotu .8s linear 1;
+    -o-animation: gotu .8s linear 1;
+    animation: gotu .8s linear 1;
+    left: -30px;
+    content: "<<<"; }
   section .contentApp button {
     display: block;
     height: 60px;
@@ -75,6 +157,7 @@ section {
     margin: 5px auto 0;
     cursor: pointer;
     outline: none;
+    color: #6A8A8E;
     background: -moz-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(250, 250, 250, 0.5)), color-stop(50%, rgba(210, 247, 245, 0.5)), color-stop(100%, rgba(250, 250, 250, 0.5)));
     background: -webkit-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
@@ -85,10 +168,10 @@ section {
     background-repeat: no-repeat;
     background-size: 200% 200%;
     background-position: 100% 50%;
-    -moz-transition: background-position 0.8s, box-shadow 0.8s;
-    -o-transition: background-position 0.8s, box-shadow 0.8s;
-    -webkit-transition: background-position 0.8s, box-shadow 0.8s;
-    transition: background-position 0.8s, box-shadow 0.8s; }
+    -moz-transition: background-position 0.4s, box-shadow 0.4s;
+    -o-transition: background-position 0.4s, box-shadow 0.4s;
+    -webkit-transition: background-position 0.4s, box-shadow 0.4s;
+    transition: background-position 0.4s, box-shadow 0.4s; }
     section .contentApp button:hover {
       background-position: 0% 0%;
       box-shadow: 0 6px 9px -1px rgba(134, 201, 225, 0.3); }
@@ -102,7 +185,6 @@ navigation {
 news {
   width: 200px;
   height: auto;
-  border-left: 2px solid black;
   display: inline-block;
   vertical-align: top; }
   news h2 {
@@ -143,10 +225,10 @@ news {
       background-repeat: no-repeat;
       background-size: 200% 200%;
       background-position: 100% 50%;
-      -moz-transition: background-position 0.8s, box-shadow 0.8s;
-      -o-transition: background-position 0.8s, box-shadow 0.8s;
-      -webkit-transition: background-position 0.8s, box-shadow 0.8s;
-      transition: background-position 0.8s, box-shadow 0.8s; }
+      -moz-transition: background-position 0.4s, box-shadow 0.4s;
+      -o-transition: background-position 0.4s, box-shadow 0.4s;
+      -webkit-transition: background-position 0.4s, box-shadow 0.4s;
+      transition: background-position 0.4s, box-shadow 0.4s; }
       news .type + a:hover {
         background-position: 0% 0%;
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225, 0.3); }
@@ -156,12 +238,85 @@ news {
       text-align: center;
       top: 11px;
       right: -17px;
-      background: #590328;
+      background: #ffee00;
       height: 14px;
       width: 70px;
       font-size: 12px;
       line-height: 12px;
-      color: #E9FBFA;
+      color: #000;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+
+mywork {
+  width: 100%; }
+  mywork .type {
+    margin-top: 20px;
+    color: #6A8A8E;
+    border-bottom: 1px solid #d2f7f5;
+    text-align: left;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    cursor: pointer; }
+  mywork .element {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 180px;
+    width: 180px;
+    background-color: #6A8A8E;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #6A8A8E;
+    cursor: pointer;
+    overflow: hidden;
+    background: -moz-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(250, 250, 250, 0.5)), color-stop(50%, rgba(210, 247, 245, 0.5)), color-stop(100%, rgba(250, 250, 250, 0.5)));
+    background: -webkit-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
+    background: -o-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(250, 250, 250, 0.5) 0%, rgba(210, 247, 245, 0.5) 50%, rgba(250, 250, 250, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#d2f7f5', GradientType=1 );
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    background-position: 100% 50%;
+    -moz-transition: background-position 0.4s, box-shadow 0.4s;
+    -o-transition: background-position 0.4s, box-shadow 0.4s;
+    -webkit-transition: background-position 0.4s, box-shadow 0.4s;
+    transition: background-position 0.4s, box-shadow 0.4s; }
+    mywork .element:hover {
+      background-position: 0% 0%;
+      box-shadow: 0 6px 9px -1px rgba(134, 201, 225, 0.3); }
+    mywork .element:before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 0; }
+    mywork .element .nameOf {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      padding: 0;
+      margin: 0;
+      width: 96%;
+      word-break: break-all;
+      text-align: center; }
+    mywork .element.new:after {
+      content: "new";
+      position: absolute;
+      text-align: center;
+      bottom: 11px;
+      right: -17px;
+      background: #ffee00;
+      height: 16px;
+      width: 70px;
+      font-size: 14px;
+      line-height: 14px;
+      color: #000;
       -ms-transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg); }

@@ -3,7 +3,9 @@
 
     angular.module('myApp', [
             'navigation',
-            'news'
+            'news',
+            'mywork',
+            'aboutmy'
     ])
         .config(['$httpProvider', function ($httpProvider) {
 
