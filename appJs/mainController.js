@@ -10,14 +10,21 @@
      */
     function mainController($scope, $location) {
         $scope.myName = 'Скоропад Андрій';
-        $scope.hello = 'Data wos sendet';
-        //$scope.$watch('hello', function(){
-        //    console.log('mainController', $scope.hello);
-        //})
+        $scope.hello = {};
+        $scope.hello.data = 'main';
+        $scope.paige = 'main';
 
+        $scope.$watch('hello.data', function(){
+            //$scope.paige = $scope.hello;
+            console.log('mainController', $scope.hello.data, $scope.paige );
+        })
+        $scope.$watch('paige', function(){
+            //$scope.paige = $scope.hello;
+            console.log('mainController', $scope.hello, $scope.paige );
+        })
         $scope.changesHello = function(){
 
-            $scope.hello = 'Скоропад Андрій';
+            $scope.hello.data = 'Скоропад Андрій';
         }
     };
 

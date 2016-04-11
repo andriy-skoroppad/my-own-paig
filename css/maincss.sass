@@ -1,4 +1,8 @@
 //mixin
+@mixin rotate($angl)
+  -ms-transform: rotate($angl)
+  -webkit-transform: rotate($angl)
+  transform: rotate($angl)
 @mixin keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}
     @content
@@ -53,6 +57,7 @@
   -o-transition-property:      $property
   -webkit-transition-property: $property
   transition-property:         $property
+//mixin End
 
 body
   padding: 0
@@ -84,6 +89,7 @@ section
   vertical-align: top
   width: 1040px
   h1
+    color: #6A8A8E
     display: block
     width: 100%
     border-bottom: 2px solid #d2f7f5
@@ -101,6 +107,7 @@ section
       border-radius: 5px
       margin: 5px auto 0
       cursor: pointer
+      outline: none
       @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
       background-size: 200% 200%
       @include backgroundPosition(100%, 50%)
@@ -108,3 +115,64 @@ section
       &:hover
         @include backgroundPosition(0%, 0%)
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
+navigation
+  width: 800px
+  height: auto
+  display: inline-block
+  vertical-align: top
+news
+  width: 200px
+  height: auto
+  border-left: 2px solid black
+  display: inline-block
+  vertical-align: top
+  h2
+    color: #6A8A8E
+    border-bottom: 1px solid #d2f7f5
+    width: 95%
+    text-align: center
+    font-size: 18px
+    line-height: 20px
+    margin: auto
+  .type
+    text-align: left
+    text-decoration: underline
+    color: #6A8A8E
+    font-size: 16px
+    padding-top: 4px
+    padding-left: 7px
+    &+ a
+      min-height: 30px
+      width: 90%
+      display: block
+      position: relative
+      text-align: left
+      margin: 0 0 0 10px
+      padding: 5px 0 0 5px
+      text-decoration: none
+      color: #6A8A8E
+      overflow: hidden
+      border-radius: 5px 0 5px 5px
+      line-height: 21px
+      @include gradient45degr(rgba(250,250,250,.5), 0%, rgba(210,247,245,.5), 50%, rgba(250,250,250,.5), 100%)
+      background-size: 200% 200%
+      @include backgroundPosition(100%, 50%)
+      @include transition( background-position .8s, box-shadow .8s)
+      &:hover
+        @include backgroundPosition(0%, 0%)
+        box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
+    &+.new:after
+      content: 'new'
+      position: absolute
+      text-align: center
+      top: 11px
+      right: -17px
+      background: #590328
+      height: 14px
+      width: 70px
+      font-size: 12px
+      line-height: 12px
+      color: #E9FBFA
+      @include rotate(-45deg)
+
+

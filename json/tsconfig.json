@@ -1,0 +1,18 @@
+[
+  {
+    "type":"web",
+    "link": "#",
+    "name": "Моя ігра",
+    "new": true,
+    "img":"",
+    "show": true
+  },
+  {
+    "type":"web",
+    "link": "#",
+    "name": "My site",
+    "new": true,
+    "img":"",
+    "show": true
+  }
+]

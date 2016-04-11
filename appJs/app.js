@@ -2,7 +2,8 @@
     'use strict';
 
     angular.module('myApp', [
-            'navigation'
+            'navigation',
+            'news'
     ])
         .config(['$httpProvider', function ($httpProvider) {
 
