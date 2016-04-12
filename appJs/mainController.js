@@ -2,29 +2,33 @@
     'use strict';
 
     angular.module('myApp')
-        .controller('mainController', ['$scope', '$location', mainController]);
+        .controller('mainController', ['$scope', '$resource', '$location', mainController]);
 
     /**
      *
      * @constructor
      */
-    function mainController($scope, $location) {
-        $scope.myName = 'Скоропад Андрій';
-        $scope.hello = {};
-        $scope.hello.data = 'main';
-        $scope.paige = 'main';
+    function mainController($scope, $resource, $location) {
 
-        $scope.$watch('hello.data', function(){
-            //$scope.paige = $scope.hello;
-            console.log('mainController', $scope.hello.data, $scope.paige );
-        })
-        $scope.$watch('paige', function(){
-            //$scope.paige = $scope.hello;
-            console.log('mainController', $scope.hello, $scope.paige );
-        })
-        $scope.changesHello = function(){
+        $scope.session = {};
+        $scope.session.name = 'main';
+        $scope.menu = [];
+        $scope.title = '';
+        var Request = $resource('json/main_page.json', {}, {'get' : { method : "GET", isArray : false }});
+        Request.get().$promise.then(function (data) {
+            console.log('data', data);
+            $scope.title = data.title;
+            $scope.menu = data.menu;
+            console.log($scope.menu);
+        });
 
-            $scope.hello.data = 'Скоропад Андрій';
+        $scope.$watch('session.name', function(){
+
+            console.log('mainController', $scope.session.name);
+        });
+
+        $scope.goToMainpage = function(){
+            $scope.session.name = 'main';
         }
     };
 

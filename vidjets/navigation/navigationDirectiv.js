@@ -8,15 +8,14 @@
 
     function Menu(){
         return {
-            scope: {hello: '=hello'},
+            scope: {session: '=session', menu: '=menu'},
             restrict: 'E',
             replace: false,
             templateUrl: 'vidjets/navigation/navigation.html',
             link : function($scope, element, attrs, parentController){
                 console.log('navigation');
-                $scope.changesHello = function(){
-                    $scope.hello.data = event.target.innerHTML;
-                    $scope.paige = 'wwww';
+                $scope.goTo = function( name ){
+                    $scope.session.name = name;
                 }
             }
         }

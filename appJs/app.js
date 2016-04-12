@@ -5,7 +5,8 @@
             'navigation',
             'news',
             'mywork',
-            'aboutmy'
+            'aboutmy',
+            'ngResource'
     ])
         .config(['$httpProvider', function ($httpProvider) {
 

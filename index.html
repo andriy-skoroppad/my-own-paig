@@ -11,6 +11,7 @@
     <link type="text/css" rel="StyleSheet" href="css/maincss.css" />
     <script type="text/javascript" src="angular/angular.min.js"></script>
     <script type="text/javascript" src="angular/angular-ui-router.js"></script>
+    <script type="text/javascript" src="angular/angular-resource.js"></script>
     <script type="text/javascript" src="appJs/app.js"></script>
     <script type="text/javascript" src="appJs/mainController.js"></script>
 
@@ -30,14 +31,14 @@
 <body data-ng-controller="mainController">
     <div class="content">
         <section>
-            <ng-switch on="paige">
-                <h1 class="back" data-ng-click="changesHello()">{{myName}}</h1>
+            <ng-switch on="session.name">
+                <h1 class="back" data-ng-click="goToMainpage()">{{title}}</h1>
 
                 <div class="contentApp">
-                    <navigation data-hello='hello' ng-switch-when="main"></navigation>
+                    <navigation data-session='session' data-menu='menu' ng-switch-when="main"></navigation>
                     <news ng-switch-when="main"></news>
-                    <mywork></mywork>
-                    <aboutmy></aboutmy>
+                    <mywork ng-switch-when="mywork"></mywork>
+                    <aboutmy ng-switch-when="aboutMy"></aboutmy>
                 </div>
             </ng-switch>
 

@@ -1,4 +1,3 @@
-<button data-ng-click="changesHello()">Про мене</button>
-<button data-ng-click="changesHello()">Мої роботи</button>
-<button data-ng-click="changesHello()">{{hello.data}}</button>
+<button data-ng-repeat="position in menu" data-ng-click="goTo(position.direct)">{{position.name}}</button>
+<!--<button data-ng-click="goTo('mywork')">Мої роботи</button>-->
 
