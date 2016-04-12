@@ -1,8 +1,8 @@
 <div class="type">Web</div>
-<a href="#" class="element new">
-    <div class="nameOf">Calculator</div>
+<a data-ng-repeat="elem in list.web" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''">
+    <div class="nameOf">{{elem.name}}</div>
 </a>
-<a href="#" class="element">
+<!--<a href="#" class="element">
     <div class="nameOf">Calculator2</div>
 </a>
 <a href="#" class="element new">
@@ -13,12 +13,12 @@
 </a>
 <a href="#" class="element new">
     <div class="nameOf">Calculator5</div>
-</a>
+</a>-->
 <div class="type">Ingenearing</div>
-<a href="#" class="element">
-    <div class="nameOf">Calculator</div>
+<a data-ng-repeat="elem in list.ing" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''">
+    <div class="nameOf">{{elem.name}}</div>
 </a>
-<a href="#" class="element">
+<!--<a href="#" class="element">
     <div class="nameOf">Calculator2</div>
 </a>
 <a href="#" class="element">
@@ -29,4 +29,4 @@
 </a>
 <a href="#" class="element">
     <div class="nameOf">Calculator5</div>
-</a>
+</a>-->

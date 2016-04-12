@@ -1,8 +1,10 @@
-<h2>Новинки</h2>
-<div class="type">Web</div>
-<a href="#" class="new">My game</a>
-<div class="type">Web</div>
+<h2>Останні роботи</h2>
+<div data-ng-repeat="elem in list">
+    <div class="type">{{elem.type}}</div>
+    <a href="#" data-ng-href="{{elem.link}}" data-ng-class="elem.new?'new':''">{{elem.name}}</a>
+</div>
+<!--<div class="type">Web</div>
 <a href="#">My game2</a>
 <div class="type">Ingeniering</div>
-<a href="#">My work</a>
+<a href="#">My work</a>-->
 

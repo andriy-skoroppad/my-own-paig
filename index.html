@@ -32,13 +32,13 @@
     <div class="content">
         <section>
             <ng-switch on="session.name">
-                <h1 class="back" data-ng-click="goToMainpage()">{{title}}</h1>
+                <h1 class="back" data-ng-click="goToMainpage()">{{session.title}}</h1>
 
                 <div class="contentApp">
-                    <navigation data-session='session' data-menu='menu' ng-switch-when="main"></navigation>
-                    <news ng-switch-when="main"></news>
-                    <mywork ng-switch-when="mywork"></mywork>
-                    <aboutmy ng-switch-when="aboutMy"></aboutmy>
+                    <navigation data-session='session' ng-switch-when="main"></navigation>
+                    <news ng-switch-when="main"  data-work='work'></news>
+                    <mywork ng-switch-when="mywork" data-session='session' data-work='work'></mywork>
+                    <aboutmy ng-switch-when="aboutMy" data-session='session' data-about='about'></aboutmy>
                 </div>
             </ng-switch>
 
