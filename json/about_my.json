@@ -1,0 +1,28 @@
+{
+  "title": "На головну",
+  "name": "Андрій Скоропад",
+  "schools": "НУ\"ЛП\"",
+  "worked": "інженером теплопостачання 2012 - 2016 р",
+  "work": "Front End розробником 2016 р",
+  "know": "CSS, HTML, javascript, angularJs, Autocad",
+  "social":[
+    {
+      "class": "faisbuk",
+      "link": "#",
+      "img": "#",
+      "show": true
+    },
+    {
+      "class": "vk",
+      "link": "#",
+      "img": "#",
+      "show": true
+    },
+    {
+      "class": "tviter",
+      "link": "#",
+      "img": "#",
+      "show": true
+    }
+  ]
+}

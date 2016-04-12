@@ -1,0 +1,13 @@
+{
+  "title": "Андрій Скоропад",
+  "menu":[
+    {
+      "name": "Про мене",
+      "direct": "aboutMy"
+    },
+    {
+      "name": "Мої роботи",
+      "direct": "aboutMy"
+    }
+  ]
+}

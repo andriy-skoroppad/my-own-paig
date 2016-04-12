@@ -1,0 +1,37 @@
+{
+  "title": "На головну",
+  "data": [
+    {
+      "type":"web",
+      "link": "#",
+      "name": "Моя ігра",
+      "new": true,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "#",
+      "name": "My site2",
+      "new": true,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "#",
+      "name": "My site3",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"ingenearing",
+      "link": "#",
+      "name": "Вузол вводу",
+      "new": true,
+      "img":"",
+      "show": true
+    }
+  ]
+}
