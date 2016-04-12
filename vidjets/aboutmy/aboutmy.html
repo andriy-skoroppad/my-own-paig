@@ -1,12 +1,14 @@
 <h2>{{about.name}}</h2>
 <h3>Навчався в {{about.schools}}. <br>
     Працював {{about.worked}}. <br>
-    Працую {{about.work}}. <br>
+    Працюю {{about.work}}. <br>
     Знаю : {{about.know}}.
 </h3>
 <div class="social">
-    <a href="#" class="faisbuk"></a>
-    <a href="#" class="vk"></a>
+    <a data-ng-repeat="buton in about.social" href="#" data-ng-href="{{buton.link}}" data-ng-class="buton.class" data-ng-show="buton.show">
+        <img src="" data-ng-src="{{buton.img}}" alt="">
+    </a>
+    <!--<a href="#" class="vk"></a>
     <a href="#" class="tviter"></a>
-    <a href="#" class="faisbuk"></a>
+    <a href="#" class="faisbuk"></a>-->
 </div>

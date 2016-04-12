@@ -32,7 +32,7 @@
     <div class="content">
         <section>
             <ng-switch on="session.name">
-                <h1 class="back" data-ng-click="goToMainpage()">{{session.title}}</h1>
+                <h1 data-ng-class="session.title == 'На головну'? 'back': ''" data-ng-click="goToMainpage()">{{session.title}}</h1>
 
                 <div class="contentApp">
                     <navigation data-session='session' ng-switch-when="main"></navigation>

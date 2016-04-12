@@ -2,7 +2,13 @@ body {
   font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/bgr.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
 
 @-webkit-keyframes lite {
   0% {
@@ -113,13 +119,13 @@ body {
     width: 100%; }
 
 .content {
-  width: 1200px;
-  margin: auto; }
+  margin: 0; }
 
 section {
-  display: inline-block;
-  vertical-align: top;
-  width: 1040px; }
+  display: block;
+  width: 1040px;
+  margin: 0 auto;
+  padding-top: 1px; }
   section h1 {
     color: #6A8A8E;
     display: block;
@@ -364,9 +370,23 @@ aboutmy {
       -moz-transition: background-position 0.4s, box-shadow 0.4s;
       -o-transition: background-position 0.4s, box-shadow 0.4s;
       -webkit-transition: background-position 0.4s, box-shadow 0.4s;
-      transition: background-position 0.4s, box-shadow 0.4s; }
+      transition: background-position 0.4s, box-shadow 0.4s;
+      overflow: hidden; }
       aboutmy .social a:hover {
         background-position: 0% 0%;
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225, 0.3); }
+      aboutmy .social a:before {
+        content: "";
+        height: 100%;
+        width: 0px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle; }
+      aboutmy .social a img {
+        height: 70%;
+        width: 70%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center; }
 
 /*# sourceMappingURL=maincss.css.map */

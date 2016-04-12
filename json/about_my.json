@@ -4,24 +4,24 @@
   "schools": "НУ\"ЛП\"",
   "worked": "інженером теплопостачання 2012 - 2016 р",
   "work": "Front End розробником 2016 р",
-  "know": "CSS, HTML, javascript, angularJs, Autocad",
+  "know": "CSS, Sass, HTML, javascript, angularJs, Autocad",
   "social":[
     {
       "class": "faisbuk",
       "link": "#896",
-      "img": "#",
+      "img": "img/f.svg",
       "show": true
     },
     {
       "class": "vk",
       "link": "#111",
-      "img": "#",
+      "img": "img/vk.svg",
       "show": true
     },
     {
       "class": "tviter",
       "link": "#123",
-      "img": "#",
+      "img": "img/tvit.svg",
       "show": true
     }
   ]

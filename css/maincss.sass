@@ -67,8 +67,15 @@ body
   padding: 0
   margin: 0
   margin-bottom: 30px
+  height: 100%
+  width: 100%
   //@include gradient45degr(rgb(192, 189, 188), 0%, rgb(255, 253, 241), 0%, rgb(157, 157, 141), 100%)
   //@include animation('lite 1s cubic-bezier(1, 1.01, .01, .03) infinite')
+  background-image: url("../img/bgr.svg")
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: cover
+
 
 
 @include keyframes(lite)
@@ -99,12 +106,13 @@ body
   img
     width: 100%
 .content
-  width: 1200px
-  margin: auto
+  //width: 1200px
+  margin: 0
 section
-  display: inline-block
-  vertical-align: top
+  display: block
   width: 1040px
+  margin: 0 auto
+  padding-top: 1px
   h1
     color: #6A8A8E
     display: block
@@ -303,8 +311,23 @@ aboutmy
       background-size: 200% 200%
       @include backgroundPosition(100%, 50%)
       @include transition( background-position .4s, box-shadow .4s)
+      overflow: hidden
       &:hover
         @include backgroundPosition(0%, 0%)
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
+      &:before
+        content: ""
+        height: 100%
+        width: 0px
+        position: relative
+        display: inline-block
+        vertical-align: middle
+      img
+        height: 70%
+        width: 70%
+        display: inline-block
+        vertical-align: middle
+        text-align: center
+
 
 
