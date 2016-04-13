@@ -13,7 +13,6 @@
             replace: false,
             templateUrl: 'vidjets/mywork/mywork.html',
             link : function($scope, element, attrs, parentController){
-                console.log('news');
                 $scope.session.title = $scope.work.title;
                 $scope.list = {};
                 $scope.list.web = [];

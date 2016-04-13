@@ -3,11 +3,11 @@
   "menu":[
     {
       "name": "Про мене",
-      "direct": "aboutMy"
+      "direct": "about"
     },
     {
       "name": "Мої роботи",
-      "direct": "mywork"
+      "direct": "myWork"
     }
   ]
 }

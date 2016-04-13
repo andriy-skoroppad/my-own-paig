@@ -4,9 +4,9 @@
 
     angular
         .module('navigation')
-        .directive('navigation', [Menu]);
+        .directive('navigation', ['$state', Menu]);
 
-    function Menu(){
+    function Menu($state){
         return {
             scope: {session: '=session'},
             restrict: 'E',
@@ -19,6 +19,7 @@
                 $scope.session.title = $scope.session.data.title;
                 $scope.goTo = function( name ){
                     $scope.session.name = name;
+                    $state.go( name , {}, {reload: true});
                 };
             }
         }

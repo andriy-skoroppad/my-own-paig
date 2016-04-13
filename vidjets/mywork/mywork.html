@@ -1,5 +1,5 @@
 <div class="type">Web</div>
-<a data-ng-repeat="elem in list.web" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''">
+<a data-ng-repeat="elem in list.web" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''" data-ng-show="elem.show">
     <div class="nameOf">{{elem.name}}</div>
 </a>
 <!--<a href="#" class="element">
@@ -15,7 +15,7 @@
     <div class="nameOf">Calculator5</div>
 </a>-->
 <div class="type">Ingenearing</div>
-<a data-ng-repeat="elem in list.ing" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''">
+<a data-ng-repeat="elem in list.ing" href="#" data-ng-href="{{elem.link}}" class="element" data-ng-class="elem.new?'new':''" data-ng-show="elem.show">
     <div class="nameOf">{{elem.name}}</div>
 </a>
 <!--<a href="#" class="element">

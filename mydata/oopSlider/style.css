@@ -1,0 +1,209 @@
+.statja {
+  background: rgba(67, 95, 52, 0.27);
+  border-color: black;
+  border-width: 0px 3px 0px 3px;
+  border-style: solid;
+  font-family: Consolas, "Lucida Console", monospace;
+  font-size: 18px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 1px;
+
+}
+
+.open {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+  
+}
+
+.contentClose{
+  color: #ffffff;
+  position: relative;
+  width: 250px;
+  height: 0px;
+  margin: auto;
+  background: rgba(10, 10, 10, 0.47);
+  overflow: hidden;
+  
+
+}
+
+.animation{
+  -webkit-transition: height 1s ;
+  -moz-transition: height 1s 0;
+  -o-transition: height 1s;
+  transition: height 1s;
+ 
+}
+.too{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.slider{
+  margin: auto;
+  position: relative;
+  width: 80%;
+  height: 400px;
+  background: rgba(105, 65, 65, 0.24);
+  overflow: hidden;
+}
+
+
+
+.blok {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  text-align: center;
+}
+
+div[class="blok"]:nth-child(1){
+  left: 0;
+}
+
+.red{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 0, 0, 0.31);
+}
+
+.red2{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(147, 0, 255, 0.31);
+}
+.red3{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 255, 216, 0.31);
+}
+.red4{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(0, 255, 10, 0.31);
+}
+.red5{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: rgba(255, 216, 0, 0.31);
+}
+
+.nav{
+  height: 100%;
+  width: 5%;
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-size: 50px;
+  padding-top: 170px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 1);
+}
+
+.left{
+  float: left;
+}
+
+.rigth{
+  float: right;
+}
+
+.navigation{
+  width: auto;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  background: rgba(255, 255, 255, 0);
+  bottom: 0;
+  left: 40%;
+  padding: 0;
+  border-radius: 10px;
+}
+.navigation > a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding: 0;
+  margin: 5px 0 0 10px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  /*-webkit-transition: background .4s;
+  -moz-transition: background .4s;
+  -o-transition: background .4s;
+  transition: background .4s;*/
+}
+.navigation > .nochacked {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-animation: aaaa .5s linear 1 alternate;
+  animation: aaaa .5s linear 1 alternate;
+}
+
+@-webkit-keyframes aaaa {
+  0%   {background: rgba(255, 255, 255, 0.9);}
+  100% {background: rgba(255, 255, 255, 0.1);}
+}
+
+/* Standard syntax */
+@keyframes aaaa {
+   0%   {background: rgba(255, 255, 255, 0.9);}
+  100% {background: rgba(255, 255, 255, 0.1);}
+}
+
+.navigation > a:last-child{
+  margin-right: 10px;
+}
+
+.navigation:hover{
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.navigation:hover a{
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.navigation > a:hover{
+  background: rgba(255, 255, 255, 0.6);
+}
+.navigation > .chacked, .navigation:hover .chacked{
+  background: rgba(255, 255, 255, 0.9);
+ -webkit-animation: aaa .5s linear 1 alternate;
+  animation: aaa .5s linear 1 alternate;
+}
+
+@-webkit-keyframes aaa {
+  0%   {background: rgba(255, 255, 255, 0.1);}
+  100% {background: rgba(255, 255, 255, 0.9);}
+}
+
+/* Standard syntax */
+@keyframes aaa {
+   0%   {background: rgba(255, 255, 255, 0.1);}
+  100% {background: rgba(255, 255, 255, 0.9);}
+}

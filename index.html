@@ -11,9 +11,12 @@
     <link type="text/css" rel="StyleSheet" href="css/maincss.css" />
     <script type="text/javascript" src="angular/angular.min.js"></script>
     <script type="text/javascript" src="angular/angular-ui-router.js"></script>
+    <script type="text/javascript" src="angular/angular-route.js"></script>
     <script type="text/javascript" src="angular/angular-resource.js"></script>
     <script type="text/javascript" src="appJs/app.js"></script>
     <script type="text/javascript" src="appJs/mainController.js"></script>
+    <script type="text/javascript" src="routing/routingModule.js"></script>
+    <script type="text/javascript" src="routing/routingConfig.js"></script>
 
     <script type="text/javascript" src="vidjets/navigation/navigationModule.js"></script>
     <script type="text/javascript" src="vidjets/navigation/navigationDirectiv.js"></script>
@@ -26,21 +29,14 @@
 
     <script type="text/javascript" src="vidjets/aboutmy/aboutmyModule.js"></script>
     <script type="text/javascript" src="vidjets/aboutmy/aboutmyDirectiv.js"></script>
-
+    <!--<base href="/my_Web_paige/index.html">-->
 </head>
 <body data-ng-controller="mainController">
     <div class="content">
         <section>
-            <ng-switch on="session.name">
-                <h1 data-ng-class="session.title == 'На головну'? 'back': ''" data-ng-click="goToMainpage()">{{session.title}}</h1>
+            <h1 data-ng-class="session.title == 'На головну'? 'back': ''" data-ng-click="goToMainpage()">{{session.title}}</h1>
 
-                <div class="contentApp">
-                    <navigation data-session='session' ng-switch-when="main"></navigation>
-                    <news ng-switch-when="main"  data-work='work'></news>
-                    <mywork ng-switch-when="mywork" data-session='session' data-work='work'></mywork>
-                    <aboutmy ng-switch-when="aboutMy" data-session='session' data-about='about'></aboutmy>
-                </div>
-            </ng-switch>
+            <div class="contentApp" data-ui-view="content" ></div>
 
 
         </section>
