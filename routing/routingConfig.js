@@ -14,7 +14,20 @@
 
         $stateProvider
             .state('home', {
-                url: config.root + '',
+                url: '',
+                cache: false,
+                data: {},
+                views: {
+                    'content': {
+                        templateUrl: 'routing/layot/home.html',
+                        controller: function() {
+
+                        }
+                    }
+                }
+            })
+            .state('home2', {
+                url: '/',
                 cache: false,
                 data: {},
                 views: {
@@ -27,7 +40,7 @@
                 }
             })
             .state('about', {
-                url: config.root + '/about',
+                url: '/about',
                 cache: false,
                 data: {},
                 views: {
@@ -40,7 +53,7 @@
                 }
             })
             .state('myWork', {
-                url: config.root + '/work',
+                url: '/work',
                 cache: false,
                 data: {},
                 views: {
@@ -61,11 +74,11 @@
                 }
             });
 
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false,
-            rewriteLinks: false
-        });
+        //$locationProvider.html5Mode({
+        //    enabled: true,
+        //    requireBase: false,
+        //    rewriteLinks: false
+        //});
     }
 
 

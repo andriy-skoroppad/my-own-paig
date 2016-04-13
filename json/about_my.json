@@ -8,20 +8,26 @@
   "social":[
     {
       "class": "faisbuk",
-      "link": "#896",
-      "img": "../img/f.svg",
+      "link": "https://www.facebook.com/andriy.skoropad.1",
+      "img": "img/f.svg",
       "show": true
     },
     {
       "class": "vk",
-      "link": "#111",
-      "img": "../img/vk.svg",
+      "link": "https://vk.com/id78223428",
+      "img": "img/vk.svg",
       "show": true
     },
     {
       "class": "tviter",
-      "link": "#123",
-      "img": "../img/tvit.svg",
+      "link": "https://twitter.com/AndriySkoropad",
+      "img": "img/tvit.svg",
+      "show": true
+    },
+    {
+      "class": "google",
+      "link": "https://plus.google.com/u/0/117520467317883701392/posts",
+      "img": "img/google.svg",
       "show": true
     }
   ]

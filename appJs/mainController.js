@@ -17,7 +17,6 @@
         $scope.session.title = '';
         var Request = $resource('json/main_page.json', {}, {'get' : { method : "GET", isArray : false }});
         Request.get().$promise.then(function (data) {
-            console.log('data', data);
             $scope.session.data = data;
             $scope.session.menu = data.menu;
         });
@@ -36,7 +35,6 @@
         //});
 
         $scope.goToMainpage = function(){
-            console.log('click home');
             $scope.session.name = 'home';
             $state.go('home', {}, {reload: true});
         }

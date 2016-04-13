@@ -1,0 +1,160 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+	display: block;
+}
+
+html {
+	height:100%;
+}
+
+* html body {
+	height:100%;
+}
+footer, header, section, body{
+	margin:0;
+	padding:0;
+}
+
+body {
+ 	min-height:100%;
+ 	position: relative;
+ 	background: #404040;
+}
+
+footer{
+	bottom: 0; 
+	position: absolute;  
+	width: 100%;
+}
+.footer{
+	background: #B55DE8;
+	height: 60px;
+	margin: auto;
+	position: relative;
+	width: 1200px;
+}
+
+section{
+	margin: auto;
+	padding-bottom: 60px; /*Для футера*/
+	width: 1200px;
+}
+
+article{
+	margin: auto;
+	width: 1200px;
+}
+
+header{
+	background: #EFD921;
+	border-radius:10px;
+	height: 600px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 1200px;
+}
+
+#left, #right{
+    background: #10EEE6 url('img/right.svg');
+    height: 60px;
+	margin-top: 270px;
+	opacity: 0.5;
+	position: relative;
+	width: 60px;
+	z-index: 10;
+
+}
+#left:hover, #right:hover{
+	cursor: pointer;
+}
+
+#left:active{
+	border-left: solid 6px #10EEE6;
+	opacity: 0.9;
+}
+#right:active{
+	border-right: solid 6px #10EEE6;
+	opacity: 0.9;
+}
+#left{
+	background-position: 0 -2px;
+	border-radius: 0 50% 50% 0;
+	border-right: solid 1px #000;
+	float: left;
+}
+
+#right{
+	background-position: 58px -2px;
+	border-left: solid 1px #000;
+	border-radius: 50% 0 0 50%;
+	float: right;
+}
+
+header>a{
+	display: block;
+	height: 100%;
+	position: absolute;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 100%;
+	z-index: 1;
+}
+header>a img{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+header>a img:nth-of-type(1){
+	left: 0;
+}
+
+header>a img:nth-of-type(n+2){
+	left: 100%;
+	
+}
+
+.hiden{
+	visibility: hidden;
+}
+
+.blok{
+	visibility: visible;
+}
+h2{
+	color: #000;
+	font-family:  Arial, serif; 
+	font-weight: 400;
+	padding: 20px 350px;
+	position: relative;
+	text-align:center;
+	width: 500px;
+	z-index: 10;
+}
+
+h3, h4{
+	color: #FFF;
+	font-family:  Arial, serif; 
+	font-weight: 300;
+	padding: 10px;
+	position: relative;
+}
+article:nth-of-type(1){
+border-bottom: solid 2px #BFBDBD;
+}
+
+h4{
+	text-align:center;
+}
+h3{
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+    column-gap: 20px;
+	-moz-column-gap: 20px;
+	-webkit-column-gap: 20px;
+	text-align: justify;
+}

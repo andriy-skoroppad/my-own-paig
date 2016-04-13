@@ -3,35 +3,91 @@
   "data": [
     {
       "type":"web",
-      "link": "#146",
-      "name": "Моя ігра",
+      "link": "mydata/blog/main.html",
+      "name": "Розрахунок опалення вентиляції",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/blog/main.html",
+      "name": "Верстка для блогу",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/player/index.html",
+      "name": "Плеєр для локальних файлів",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/game1/main.html",
+      "name": "Гра без програшу",
       "new": true,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/mobile/main.html",
+      "name": "Резинова верстка",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/oopSliderAndMenu/main.html",
+      "name": "Слайдер і випадаючий список в ООП стилі",
+      "new": true,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
+      "link": "mydata/slider/main.html",
+      "name": "Слайдер простий на jquery",
+      "new": false,
       "img":"",
       "show": true
     },
     {
       "type":"ingenearing",
-      "link": "#888",
-      "name": "Вузол вводу",
-      "new": true,
-      "img":"",
-      "show": true
-    },
-    {
-      "type":"web",
-      "link": "#123",
-      "name": "My site2",
-      "new": true,
-      "img":"",
-      "show": true
-    },
-    {
-      "type":"web",
-      "link": "#635",
-      "name": "My site3",
+      "link": "mydata/pdf/kotelnja.pdf",
+      "name": "Креслення котельні",
       "new": false,
       "img":"",
-    "show": true
+      "show": true
+    },
+    {
+      "type":"ingenearing",
+      "link": "mydata/pdf/vvid.pdf",
+      "name": "Креслення вузла вводу",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"ingenearing",
+      "link": "mydata/pdf/ventell.pdf",
+      "name": "Креслення системи вентиляції",
+      "new": false,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"ingenearing",
+      "link": "mydata/pdf/opalennja.pdf",
+      "name": "Креслення системи опалення",
+      "new": false,
+      "img":"",
+      "show": false
     }
   ]
 }

@@ -205,15 +205,15 @@ news
       &:hover
         @include backgroundPosition(0%, 0%)
         box-shadow: 0 6px 9px -1px rgba(134, 201, 225,.3)
-    &+.new:after
+    &+.new:before
       content: 'new'
       position: absolute
       text-align: center
-      top: 11px
-      right: -17px
+      bottom: 6px
+      right: -87px
       background: #ffee00
       height: 14px
-      width: 70px
+      width: 200px
       font-size: 12px
       line-height: 12px
       color: #000
@@ -263,8 +263,9 @@ mywork
       padding: 0
       margin: 0
       width: 96%
-      word-break: break-all
+      //word-break: break-all
       text-align: center
+      word-wrap: break-word
     &.new:after
       content: 'new'
       position: absolute
