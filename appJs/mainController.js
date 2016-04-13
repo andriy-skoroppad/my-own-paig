@@ -2,18 +2,18 @@
     'use strict';
 
     angular.module('myApp')
-        .controller('mainController', ['$scope', '$resource', '$location', mainController]);
+        .controller('mainController', ['$scope', '$resource', '$location', '$state', mainController]);
 
     /**
      *
      * @constructor
      */
-    function mainController($scope, $resource, $location) {
+    function mainController($scope, $resource, $location, $state) {
         $scope.work = {};
         $scope.about = {};
 
         $scope.session = {};
-        $scope.session.name = 'main';
+        $scope.session.name = 'home';
         $scope.session.title = '';
         var Request = $resource('json/main_page.json', {}, {'get' : { method : "GET", isArray : false }});
         Request.get().$promise.then(function (data) {
@@ -36,7 +36,9 @@
         //});
 
         $scope.goToMainpage = function(){
-            $scope.session.name = 'main';
+            console.log('click home');
+            $scope.session.name = 'home';
+            $state.go('home', {}, {reload: true});
         }
     };
 
