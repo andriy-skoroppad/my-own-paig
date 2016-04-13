@@ -43,7 +43,7 @@
     },
     {
       "type":"web",
-      "link": "mydata/oopSliderAndMenu/main.html",
+      "link": "mydata/oopSlider/main.html",
       "name": "Слайдер і випадаючий список в ООП стилі",
       "new": true,
       "img":"",
