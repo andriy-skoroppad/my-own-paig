@@ -9,7 +9,7 @@
         var config = {root : '/my_Web_paige/index.html'};
 
         $urlRouterProvider.otherwise(function($injector){
-            $injector.get('$state').go('404');
+            $injector.get('$state').go('home');
         });
 
         $stateProvider
