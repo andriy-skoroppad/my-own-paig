@@ -81,23 +81,17 @@ body
 @include keyframes(lite)
   0%
     left: -5px
-    content: '<'
   50%
     left: -20px
-    content: '<<'
   100%
     left: -30px
-    content: '<<<'
 @include keyframes(gotu)
   0%
     left: -5px
-    content: '<'
   50%
     left: -20px
-    content: '<<'
   100%
     left: -30px
-    content: '<<<'
 .sidebar
   width: 150px
   height: 100%
@@ -137,7 +131,7 @@ section
     &:before
       @include animation('gotu .8s linear 1')
       left: -30px
-      content: '<<<'
+      content: '<'
   .contentApp
     button
       display: block

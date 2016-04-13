@@ -5,7 +5,7 @@
       "type":"web",
       "link": "mydata/blog/main.html",
       "name": "Розрахунок опалення вентиляції",
-      "new": false,
+      "new": true,
       "img":"",
       "show": true
     },
@@ -21,7 +21,7 @@
       "type":"web",
       "link": "mydata/player/index.html",
       "name": "Плеєр для локальних файлів",
-      "new": false,
+      "new": true,
       "img":"",
       "show": true
     },
