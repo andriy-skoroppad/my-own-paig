@@ -15,7 +15,7 @@
         $scope.session = {};
         $scope.session.name = 'home';
         $scope.session.title = '';
-        var Request = $resource('json/main_page.json', {}, {'get' : { method : "GET", isArray : false }});
+        var Request = $resource('json/main_page.json');
         Request.get().$promise.then(function (data) {
             $scope.session.data = data;
             $scope.session.menu = data.menu;
