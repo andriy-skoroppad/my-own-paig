@@ -2,6 +2,7 @@
 function Food(){
   this.x = getRundom(0, 300);
   this.y = getRundom(0, 500);
+  console.log(this)
 }
 //get random namber
 function getRundom(fromNamber, toNamber){
@@ -9,22 +10,99 @@ function getRundom(fromNamber, toNamber){
 }
 
 function Snake(name){
+  this.level =  0;
   this.name = name;
-  this.body = [[50,50], [50, 52], [50, 54]];
+  this.body = [[50,55], [50, 60], [50, 65], [50, 70], [50, 75], [50, 80], [50, 85]];
+  this.directionX = -1;
+  this.directionY = 0;
+  this.speed = 1;
+  document.body.onkeydown = this.change.bind(this);
+  document.body.onkeyup = this.changeup.bind(this);
 }
-Snake.prototype.muve = function(speed, directionX, directionY){
-  var head = [this.body[0][0] + (directionX * speed), this.body[0][1] + (directionY * speed)];
+Snake.prototype.change = function(event){
+  
+  switch (event.keyIdentifier) {
+    case 'Up':
+      this.directionX = 0;
+      this.directionY = -1;
+      break;
+    case 'Down':
+      this.directionX = 0;
+      this.directionY = 1;
+      break;
+    case 'Left':
+      this.directionX = -1;
+      this.directionY = 0;
+      break;
+    case 'Right':
+      this.directionX = 1;
+      this.directionY = 0;
+      break;
+    case 'Shift':
+      this.speed = 5;
+      break;
+    default:
+      // statements_def
+      break;
+  }
+}
+Snake.prototype.changeup = function(event){
+  
+  switch (event.keyIdentifier) {
+    case 'Shift':
+      this.speed = 1;
+      break;
+    default:
+      // statements_def
+      break;
+  }
+}
+Snake.prototype.muve = function(){
+  var speed = 5 * this.speed ;
+  var head = [this.body[0][0] + (this.directionX * speed), this.body[0][1] + (this.directionY * speed)];
+  if(this.body[0][0] + (this.directionX * speed) > 300){
+    head[0] = 0;
+  } else if(this.body[0][0] + (this.directionX * speed) < 0){
+    head[0] = 300;
+  };
+  if(this.body[0][1] + (this.directionY * speed) > 500){
+    head[1] = 0;
+  } else if(this.body[0][1] + (this.directionY * speed) < 0){
+    head[1] = 500;
+  };
+
   this.body.pop();
   this.body.unshift(head);
   return this.body;
 }
+Snake.prototype.drow = function(canvas){
+  for(var i = 0, length1 = this.body.length; i < length1; i++){
+    var bobyPart = canvas.getContext( '2d' );
+    bobyPart.fillStyle = '#000'; 
+    bobyPart.fillRect( this.body[i][0], this.body[i][1], 5, 5);
+  
+    
+  }
+}
+Snake.prototype.eat = function(array){
+  this.body.push(array);
+  this.level += 1;
+}
+
 //звернення до листа гри
 var canvasGame = document.getElementById( 'canvasGame' );
 var  game = canvasGame.getContext( '2d' );
 
 
+var snake = new Snake("Andriy");
+var food = new Food();
 
-
+function chackIfEat(){
+  if(( snake.body[0][0] < food.x + 3 && snake.body[0][0] > food.x - 3 ) && ( snake.body[0][1] < food.y + 3 && snake.body[0][1] > food.y - 3 ) ){
+    return true;
+  };
+  return false;
+}
 //Функція початку прорисовки
 function gameStart() {
    game.clearRect(0,0,300,500);
@@ -35,16 +113,27 @@ game.fillRect(0, 0, 300, 500);
 game.fillStyle = 'rgba(171, 248, 23, 1)';
 game.fillStyle = 'rgb(0, 0, 0)';
 game.strokeRect(0, 0, 300, 500);
-  
+
+game.fillStyle = '#FF5722';
+game.fillRect(food.x, food.y, 5, 5);
 
   
+if( chackIfEat() ){
+  snake.eat();
+  food = new Food();
+}
+snake.muve();
+snake.drow(canvasGame);
+game.font="10px Arial";
+game.fillText("Lvl:" + snake.level,10, 10); 
   //  промальовка кола і платформи
   //промальовка мяча
-  var ball = new Path2D();
-  ball.arc( 10, 100, 2, Math.PI * 2,  false);
+
+  // var ball = new Path2D();
+  // ball.arc( 10, 100, 2, Math.PI * 2,  false);
   
-  game.fillStyle = '#ffffff';
-  game.fill( ball );
+  // game.fillStyle = '#ffffff';
+  // game.fill( ball );
   
   // game.fillStyle = platform.color;
   // game.fillRect(platform.x, platform.y, platform.l, platform.h );
@@ -61,8 +150,8 @@ game.strokeRect(0, 0, 300, 500);
 };
 
 //------------------------------------****-----------------
-// var gameset = setInterval(gameStart, 10);
-gameStart();
+var gameset = setInterval(gameStart, 100);
+// gameStart();
 
 function creatMass(a1 , a2){
   var mass = [];
