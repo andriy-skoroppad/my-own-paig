@@ -11,6 +11,14 @@
     },
     {
       "type":"web",
+      "link": "mydata/game2/main.html",
+      "name": "Змейка",
+      "new": true,
+      "img":"",
+      "show": true
+    },
+    {
+      "type":"web",
       "link": "mydata/blog/main.html",
       "name": "Верстка для блогу",
       "new": false,
