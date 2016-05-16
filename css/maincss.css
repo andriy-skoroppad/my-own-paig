@@ -239,7 +239,10 @@ mywork {
     cursor: pointer; }
     mywork .type .icon-kudosLike {
       font-size: 20px;
-      color: #404040; }
+      color: #8f9a02;
+      background: -webkit-linear-gradient(black, #505902);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
   mywork .element {
     position: relative;
     display: inline-block;
