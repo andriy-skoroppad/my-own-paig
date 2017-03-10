@@ -20,25 +20,25 @@ function Snake(name){
   document.body.onkeyup = this.changeup.bind(this);
 }
 Snake.prototype.change = function(event){
-  
-  switch (event.keyIdentifier) {
-    case 'Up':
+  console.log(event.keyCode)
+  switch (event.keyCode) {
+    case 38:
       this.directionX = 0;
       this.directionY = -1;
       break;
-    case 'Down':
+    case 40:
       this.directionX = 0;
       this.directionY = 1;
       break;
-    case 'Left':
+    case 37:
       this.directionX = -1;
       this.directionY = 0;
       break;
-    case 'Right':
+    case 39:
       this.directionX = 1;
       this.directionY = 0;
       break;
-    case 'Shift':
+    case 16:
       this.speed = 5;
       break;
     default:
@@ -48,8 +48,8 @@ Snake.prototype.change = function(event){
 }
 Snake.prototype.changeup = function(event){
   
-  switch (event.keyIdentifier) {
-    case 'Shift':
+  switch (event.keyCode) {
+    case 16:
       this.speed = 1;
       break;
     default:
