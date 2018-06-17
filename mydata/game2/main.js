@@ -48,8 +48,8 @@ Snake.prototype.change = function(event){
 }
 Snake.prototype.changeup = function(event){
   
-  switch (event.keyIdentifier) {
-    case 'Shift':
+  switch (event.keyCode) {
+    case 16:
       this.speed = 1;
       break;
     default:
